@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Comprehensive contrast protection for Tailwind components */
+@layer components {
+  /* Ensure all text elements have proper contrast */
+  .text-black {
+    color: #ffffff !important;
+  }
+  
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  .bg-black {
+    background-color: #000000 !important;
+  }
+  
+  .bg-white {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+  }
+  
+  /* Form elements with proper contrast */
+  input, textarea, select {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .bg-white input, .bg-white textarea, .bg-white select,
+  .bg-gray-50 input, .bg-gray-50 textarea, .bg-gray-50 select,
+  .bg-gray-100 input, .bg-gray-100 textarea, .bg-gray-100 select {
+    color: #1f2937 !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* Button contrast protection */
+  button {
+    color: #ffffff !important;
+  }
+  
+  .bg-white button, .bg-gray-50 button, .bg-gray-100 button {
+    color: #ffffff !important;
+  }
+  
+  /* Link contrast protection */
+  a {
+    color: #87ceeb !important;
+  }
+  
+  .bg-white a, .bg-gray-50 a, .bg-gray-100 a {
+    color: #0000ff !important;
+  }
+  
+  /* Error states */
+  .text-red-500, .text-red-600, .text-red-700 {
+    color: #ff6b6b !important;
+  }
+  
+  /* Success states */
+  .text-green-500, .text-green-600, .text-green-700 {
+    color: #10b981 !important;
+  }
+  
+  /* Warning states */
+  .text-yellow-500, .text-yellow-600, .text-yellow-700 {
+    color: #87ceeb !important;
+  }
+  
+  /* Info states */
+  .text-blue-500, .text-blue-600, .text-blue-700 {
+    color: #3b82f6 !important;
+  }
+  
+  /* Placeholder protection */
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  .bg-white ::placeholder, .bg-gray-50 ::placeholder, .bg-gray-100 ::placeholder {
+    color: rgba(31, 41, 55, 0.7) !important;
+  }
+  
+  /* Focus states */
+  :focus {
+    outline: 2px solid #87ceeb !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* Disabled states */
+  :disabled, .disabled {
+    opacity: 0.6 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  .bg-white :disabled, .bg-white .disabled,
+  .bg-gray-50 :disabled, .bg-gray-50 .disabled,
+  .bg-gray-100 :disabled, .bg-gray-100 .disabled {
+    color: rgba(31, 41, 55, 0.6) !important;
+  }
+  
+  /* SVG protection */
+  svg {
+    fill: currentColor !important;
+  }
+  
+  /* Text shadow for dark backgrounds */
+  .bg-black *, .bg-gray-900 *, .bg-gray-800 *, .bg-gray-700 * {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Remove text shadow for light backgrounds */
+  .bg-white *, .bg-gray-50 *, .bg-gray-100 * {
+    text-shadow: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  @layer base {
+    * {
+      color: #ffffff !important;
+      background-color: #000000 !important;
+    }
+    
+    .bg-white *, .bg-gray-50 *, .bg-gray-100 * {
+      color: #000000 !important;
+      background-color: #ffffff !important;
+    }
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  @layer base {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

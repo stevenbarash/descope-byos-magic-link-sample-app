@@ -1,0 +1,48 @@
+/* Basic styling with contrast protection */
+input {
+  height: 30px;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.error {
+  color: #ff6b6b !important;
+  background-color: rgba(255, 107, 107, 0.1) !important;
+  border: 1px solid rgba(255, 107, 107, 0.3) !important;
+}
+
+/* Contrast protection for all elements */
+* {
+  color: #ffffff !important;
+}
+
+/* Light background detection */
+[class*="light"], [class*="white"], [style*="background: white"], [style*="background-color: white"] {
+  color: #1f2937 !important;
+}
+
+/* Form elements on light backgrounds */
+[class*="light"] input, [class*="white"] input,
+[style*="background: white"] input, [style*="background-color: white"] input {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* Button protection */
+button {
+  color: #ffffff !important;
+  background-color: #0051AD !important;
+}
+
+/* Link protection */
+a {
+  color: #87ceeb !important;
+}
+
+/* Focus states */
+:focus {
+  outline: 2px solid #87ceeb !important;
+  outline-offset: 2px !important;
+}
